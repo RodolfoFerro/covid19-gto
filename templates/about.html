@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+	<!-- STARTS JUMBOTRON -->
+	<div class="jumbotron">
+		<h1 class="display-5">Mapa de casos de COVID-19 en Guanajuato.</h1>
+		<p class="lead">En tiempos de crisis, es necesario presentar la información de manera clara y simple.</p>
+		<p class="lead">
+			<a class="btn btn-primary btn-lg" href="https://coronavirus.guanajuato.gob.mx/" role="button">Ir a la fuente oficial de información</a>
+		</p>
+	</div>
+	<!-- ENDS JUMBOTRON -->
+
+	<!-- STARTS ABOUT -->
+	<div class="container">
+		<div class="row d-flex align-items-center justify-content-center">
+			<div class="about lead col-lg-10 col-md-10 col-10">
+				<h3>¿Qué es este sitio?</h3>
+				<p>
+					Este sitio busca responder ante las necesidades...
+				</p>
+
+				<h3>¿Por qué hacerlo?</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<h3>¿Cómo se extrae la información?</h3>
+				<p>Toda la información se extrae de la <a href="https://coronavirus.guanajuato.gob.mx/">fuente oficial</a>, proporcionada por la Secretaría de Salud del estado de Guanajuato. Para la extracción de la misma, utilizamos técnicas de <i>web scraping</i> con <a href="https://python.org/">Python</a> como lenguaje de programación y <a href="https://https://selenium-python.readthedocs.io/">Selenium</a>, creando un script que ejecuta una búsqueda en el sitio oficial cada 10 minutos. Para poder lograr esta búsqueda automatizada, se programó un <i>cron job</i> usando <a href="">python-crontab</a>.</p>
+
+				<br>
+				<p><a href="https://coronavirus.guanajuato.gob.mx/" class="btn btn-primary btn-lg btn-block">Ir a la fuente oficial de información</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- ENDS ABOUT -->
+{% endblock %}

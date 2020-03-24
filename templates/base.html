@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="static/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap & Custom CSS -->
+	<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="static/style.css">
+
+    <title>COVID-19 GTO</title>
+  </head>
+  <body>
+	
+	<!-- STARTS NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="/">
+			<img class="inverted" src="static/futurelab.png" height="30" class="d-inline-block align-top" alt=""> COVID-19 GTO
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  	<span class="navbar-toggler-icon"></span>
+		</button>
+	  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="/">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/about">¿Qué es este sitio?</a>
+				</li>
+				<!-- <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Dropdown
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li> -->
+				<li class="nav-item">
+					<a class="nav-link btn btn-success" href="https://coronavirus.guanajuato.gob.mx/" tabindex="-1" aria-disabled="true">Fuente Oficial</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- ENDS NAVBAR -->
+
+	<!-- STARTS MAIN -->
+	{% block content %}
+	{% endblock %}
+	<!-- ENDS MAIN -->
+
+	<!-- STARTS FOOTER -->
+	<footer class="page-footer font-small">
+		<div class="footer-copyright text-center py-3">
+			Desarrollado con ♥︎ en <a href="https://futurelab.mx/"> Future Lab</a>, 2020.
+		</div>
+	</footer>
+	<!-- ENDS FOOTER -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="static/counterup.min.js"></script>
+	<script src="static/jquery.waypoints.min.js"></script>
+	<script src="static/main.js"></script>
+  </body>
+</html>

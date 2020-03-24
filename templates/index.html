@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block content %}
+	<!-- STARTS JUMBOTRON -->
+	<div class="jumbotron">
+		<h1 class="display-5">Mapa de casos de COVID-19 en Guanajuato.</h1>
+		<p class="lead">En tiempos de crisis, es necesario presentar la información de manera clara y simple.</p>
+		<p class="lead">
+			<a class="btn btn-primary btn-lg" href="https://coronavirus.guanajuato.gob.mx/" role="button">Ir a la fuente oficial de información</a>
+		</p>
+	</div>
+	<!-- ENDS JUMBOTRON -->
+
+	<!-- STARTS NUMBERS -->
+	<div class="container">
+        <div class="row counters">
+			<div class="col-lg-3 col-6 text-center">
+				<span class="display-3" data-toggle="counter-up">{{ totals.descartados }}</span>
+				<p>Casos descartados</p>
+			</div>
+
+			<div class="col-lg-3 col-6 text-center">
+				<span class="display-3" data-toggle="counter-up">{{ totals.investigacion }}</span>
+				<p>Casos en investigación</p>
+			</div>
+
+			<div class="col-lg-3 col-6 text-center">
+				<span class="display-3" data-toggle="counter-up">{{ totals.confirmados }}</span>
+				<p>Casos confirmados</p>
+			</div>
+
+			<div class="col-lg-3 col-6 text-center">
+				<span class="display-3" data-toggle="counter-up">{{ totals.comunitarios }}</span>
+				<p>Casos de transmisión comunitaria</p>
+			</div>
+        </div>
+	</div>
+	<!-- ENDS NUMBERS -->
+
+	<!-- STARTS MAP -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7 col-12 text-center map">
+				<div id="tooltip" display="none" style="position: absolute; display: none;"></div>
+				<br><br>
+				{{ svg_fig | safe }}
+				<label>Toca un municipio para conocer detalles.</label>
+			</div>
+			<div class="col-lg-5 col-12 table-cases">
+				<table class="table table-hover text-center">
+					<thead>
+						<tr class="table-primary">
+							<th scope="col">Municipio</th>
+							<th scope="col">Casos en investigación</th>
+							<th scope="col">Casos confirmados</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="table-light">
+							<th scope="row">Irapuato</th>
+							<td>0</td>
+							<td>1</td>
+						</tr>
+						<tr class="">
+							<th scope="row">León</th>
+							<td>41</td>
+							<td>5</td>
+						</tr>
+						<tr class="table-light">
+							<th scope="row">Salamanca</th>
+							<td>2</td>
+							<td>1</td>
+						</tr>
+						<tr class="">
+							<th scope="row">Allende</th>
+							<td>2</td>
+							<td>0</td>
+						</tr>
+						<tr class="table-light">
+							<th scope="row">Guanajuato</th>
+							<td>3</td>
+							<td>0</td>
+						</tr>
+						<tr class="">
+							<th scope="row">Celaya</th>
+							<td>4</td>
+							<td>0</td>
+						</tr>
+						<tr class="table-light">
+							<th scope="row">SFR</th>
+							<td>2</td>
+							<td>0</td>
+						</tr>
+						<tr class="">
+							<th scope="row">Silao</th>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+						<tr class="table-light">
+							<th scope="row">Tarandacuao</th>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+						<tr class="">
+							<th scope="row">Uriangato</th>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+					</tbody>
+				</table> 
+			</div>
+		</div>
+	</div>
+	<!-- ENDS MAP -->
+{% endblock %}
