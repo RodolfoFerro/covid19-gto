@@ -1,0 +1,44 @@
+.counters {
+	padding-top: 40px;
+}
+
+.counters span {
+	font-weight: bold;
+	display: block;
+	color: #2C3F51;
+}
+
+.counters p {
+	padding: 0;
+	font-size: 14px;
+	color: #2C3F51;
+}
+
+.inverted {
+	filter: invert(100%);
+}
+
+.tooltip {
+	padding: 10px;
+}
+
+.about {
+	margin: 50px auto;
+}
+
+.map {
+	padding: 40px auto;
+}
+
+.table-cases {
+	padding: 60px auto;
+	margin-top: 50px;
+}
+
+#tooltip {
+	background: rgb(37, 101, 165);
+	border-radius: 5px;
+	padding: 10px 10px;
+	color: #FFF;
+	font-size: 1.2em;
+}
