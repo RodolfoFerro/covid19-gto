@@ -47,5 +47,5 @@ docker build -t gto_covid19:latest .
 Finally, we run the application inside the container.
 
 ```bash
-docker run -d -p 5000:5000 gto_covid19:latest
+docker run -d -p 5000:5000 -v $(pwd):/app gto_covid19:latest
 ```
