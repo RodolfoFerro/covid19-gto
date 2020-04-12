@@ -6,15 +6,6 @@ Clone the repository.
 git clone https://github.com/RodolfoFerro/covid19-gto.git
 ```
 
-Once you have cloned the repo, you must need to get inside the folder and download the corresponding version of `chromedriver` for your system. (<https://sites.google.com/a/chromium.org/chromedriver/home>)
-
-```bash
-cd covid19-gto
-wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip
-unzip chromedriver_linux64.zip
-rm chromedriver_linux64.zip
-```
-
 We need to install Docker. To install Docker on a Linux (tested on Ubuntu 18.04 LTS) machine, we need to run the following.
 
 ```bash
