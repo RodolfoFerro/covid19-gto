@@ -20,7 +20,8 @@ def index():
 		'index.html',
 		resumen=resumen,
 		mapdata=gto_map,
-		estados=estados
+		estados=estados,
+		timestamp=gto.data['timestamp']
 	)
 
 @app.route('/about')

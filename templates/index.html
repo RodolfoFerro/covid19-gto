@@ -12,6 +12,17 @@
 
 	<!-- STARTS NUMBERS -->
 	<div class="container">
+		<p class="lead" id="last-update">Ultima actualización: </p>
+		<script type="text/javascript">
+			timestamp = {{ timestamp|safe }};
+			// convert to milliseconds and  
+			// then create a new Date object 
+			date = new Date(timestamp * 1000);
+			var date_field = document.getElementById("last-update");
+			let text = document.createTextNode(date.toLocaleString("es-MX"));
+			
+			date_field.appendChild(text);
+		</script>
         <div class="row counters">
 			<div class="col text-center">
 				<span class="display-3" data-toggle="counter-up">{{ resumen.descartados }}</span>
