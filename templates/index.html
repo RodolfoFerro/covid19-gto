@@ -13,24 +13,34 @@
 	<!-- STARTS NUMBERS -->
 	<div class="container">
         <div class="row counters">
-			<div class="col-lg-3 col-6 text-center">
-				<span class="display-3" data-toggle="counter-up">{{ totals.descartados }}</span>
+			<div class="col text-center">
+				<span class="display-3" data-toggle="counter-up">{{ resumen.descartados }}</span>
 				<p>Casos descartados</p>
 			</div>
 
-			<div class="col-lg-3 col-6 text-center">
-				<span class="display-3" data-toggle="counter-up">{{ totals.investigacion }}</span>
+			<div class="col text-center">
+				<span class="display-3" data-toggle="counter-up">{{ resumen.investigacion }}</span>
 				<p>Casos en investigación</p>
 			</div>
 
-			<div class="col-lg-3 col-6 text-center">
-				<span class="display-3" data-toggle="counter-up">{{ totals.confirmados }}</span>
+			<div class="col text-center">
+				<span class="display-3" data-toggle="counter-up">{{ resumen.confirmados }}</span>
 				<p>Casos confirmados</p>
 			</div>
 
-			<div class="col-lg-3 col-6 text-center">
-				<span class="display-3" data-toggle="counter-up">{{ totals.comunitarios }}</span>
+			<div class="col text-center">
+				<span class="display-3" data-toggle="counter-up">{{ resumen.comunitaria }}</span>
 				<p>Casos de transmisión comunitaria</p>
+			</div>
+
+			<div class="col text-center">
+				<span class="display-3" data-toggle="counter-up">{{ resumen.recuperados }}</span>
+				<p>Casos recuperados</p>
+			</div>
+
+			<div class="col text-center">
+				<span class="display-3" data-toggle="counter-up">{{ resumen.fallecidos }}</span>
+				<p>Fallecidos</p>
 			</div>
         </div>
 	</div>
@@ -39,72 +49,51 @@
 	<!-- STARTS MAP -->
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-7 col-12 text-center map">
+			<div class="col-lg-7 text-center map">
 				<div id="tooltip" display="none" style="position: absolute; display: none;"></div>
-				<br><br>
-				{{ svg_fig | safe }}
+				<br>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 534.91 453.27">
+					<defs>
+					  <style>
+						path {fill: #D4D4D4}
+						path:hover {opacity: 0.4;}
+						.cls-1 {fill: #18BC9C;}
+						.cls-2 {fill: #FCB748;}
+						.cls-3 {fill: #E74C3C;}
+					  </style>
+					</defs>
+					<g id="COVID-19" data-name="COVID-19">
+						{% for i in mapdata %}
+							<path class="cls-{{ i['cls_col'] }}"
+								d="{{ i['data'] }}"
+								onmousemove="showTooltip(evt, `{{ i['name'] }}`);"
+								onmouseout="hideTooltip();"
+							/>
+						{% endfor %}
+					</g>
+				</svg>
+				<br>
 				<label>Toca un municipio para conocer detalles.</label>
 			</div>
-			<div class="col-lg-5 col-12 table-cases">
+			<div class="col table-cases">
 				<table class="table table-hover text-center">
 					<thead>
 						<tr class="table-primary">
 							<th scope="col">Municipio</th>
 							<th scope="col">Casos en investigación</th>
 							<th scope="col">Casos confirmados</th>
+							<th scope="col">Casos descartados</th>
 						</tr>
 					</thead>
 					<tbody>
+						{% for name, value in estados.items() %}
 						<tr class="table-light">
-							<th scope="row">Irapuato</th>
-							<td>0</td>
-							<td>1</td>
+							<th scope="row">{{ name }}</th>
+							<td>{{ value['investigacion'] }}</td>
+							<td>{{ value['confirmados'] }}</td>
+							<td>{{ value['descartados'] }}</td>
 						</tr>
-						<tr class="">
-							<th scope="row">León</th>
-							<td>41</td>
-							<td>5</td>
-						</tr>
-						<tr class="table-light">
-							<th scope="row">Salamanca</th>
-							<td>2</td>
-							<td>1</td>
-						</tr>
-						<tr class="">
-							<th scope="row">Allende</th>
-							<td>2</td>
-							<td>0</td>
-						</tr>
-						<tr class="table-light">
-							<th scope="row">Guanajuato</th>
-							<td>3</td>
-							<td>0</td>
-						</tr>
-						<tr class="">
-							<th scope="row">Celaya</th>
-							<td>4</td>
-							<td>0</td>
-						</tr>
-						<tr class="table-light">
-							<th scope="row">SFR</th>
-							<td>2</td>
-							<td>0</td>
-						</tr>
-						<tr class="">
-							<th scope="row">Silao</th>
-							<td>1</td>
-							<td>0</td>
-						</tr>
-						<tr class="table-light">
-							<th scope="row">Tarandacuao</th>
-							<td>1</td>
-							<td>0</td>
-						</tr>
-						<tr class="">
-							<th scope="row">Uriangato</th>
-							<td>1</td>
-							<td>0</td>
-						</tr>
+						{% endfor %}
 					</tbody>
 				</table> 
 			</div>

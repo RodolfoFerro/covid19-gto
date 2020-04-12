@@ -12,10 +12,16 @@ app.config['JSON_SORT_KEYS'] = False
 @app.route('/')
 def index():
 	gto = Guanajuato()
-	totals = gto.totals
-	gto_map = gto.generate_map()
+	resumen = gto.data['resumen']
+	estados = gto.data['estados']
+	gto_map = gto.generate_map_data()
 
-	return render_template('index.html', totals=totals, svg_fig=gto_map)
+	return render_template(
+		'index.html',
+		resumen=resumen,
+		mapdata=gto_map,
+		estados=estados
+	)
 
 @app.route('/about')
 def about():

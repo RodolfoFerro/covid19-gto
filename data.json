@@ -1,0 +1,295 @@
+{
+  "timestamp": 1586724116.7780492,
+  "resumen": {
+    "descartados": "1408",
+    "investigacion": "173",
+    "confirmados": "93",
+    "comunitaria": "9",
+    "recuperados": "29",
+    "fallecidos": "5",
+    "fase": "FASE DOS"
+  },
+  "estados": {
+    "Abasolo": {
+      "confirmados": 2,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 1
+    },
+    "Acámbaro": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 5,
+      "id": 2
+    },
+    "Apaseo el Alto": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 1,
+      "id": 4
+    },
+    "Apaseo el Grande": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 5,
+      "id": 5
+    },
+    "Atarjea": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 6
+    },
+    "Celaya": {
+      "confirmados": 6,
+      "descartados": 0,
+      "investigacion": 30,
+      "id": 7
+    },
+    "Comonfort": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 9
+    },
+    "Coroneo": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 10
+    },
+    "Cortazar": {
+      "confirmados": 1,
+      "descartados": 0,
+      "investigacion": 1,
+      "id": 11
+    },
+    "Cuerámaro": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 12
+    },
+    "Doctor Mora": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 13
+    },
+    "Dolores Hidalgo": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 14
+    },
+    "Guanajuato": {
+      "confirmados": 7,
+      "descartados": 0,
+      "investigacion": 3,
+      "id": 15
+    },
+    "Huanímaro": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 16
+    },
+    "Irapuato": {
+      "confirmados": 9,
+      "descartados": 0,
+      "investigacion": 6,
+      "id": 17
+    },
+    "Jaral del Progreso": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 18
+    },
+    "Jerécuaro": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 2,
+      "id": 19
+    },
+    "León": {
+      "confirmados": 34,
+      "descartados": 0,
+      "investigacion": 75,
+      "id": 20
+    },
+    "Manuel Doblado": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 3,
+      "id": 8
+    },
+    "Moroleón": {
+      "confirmados": 1,
+      "descartados": 0,
+      "investigacion": 2,
+      "id": 21
+    },
+    "Ocampo": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 4,
+      "id": 22
+    },
+    "Pénjamo": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 23
+    },
+    "Pueblo Nuevo": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 1,
+      "id": 24
+    },
+    "Purísima del Rincón": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 1,
+      "id": 25
+    },
+    "Romita": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 1,
+      "id": 26
+    },
+    "Salamanca": {
+      "confirmados": 26,
+      "descartados": 0,
+      "investigacion": 9,
+      "id": 27
+    },
+    "Salvatierra": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 1,
+      "id": 28
+    },
+    "San Diego de la Unión": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 1,
+      "id": 29
+    },
+    "San Felipe": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 1,
+      "id": 30
+    },
+    "San Francisco del Rincón": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 7,
+      "id": 31
+    },
+    "San José Iturbide": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 32
+    },
+    "San Luis de la Paz": {
+      "confirmados": 1,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 33
+    },
+    "San Miguel de Allende": {
+      "confirmados": 3,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 3
+    },
+    "Santa Catarina": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 34
+    },
+    "Juventino Rosas": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 35
+    },
+    "Santiago Maravatio": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 36
+    },
+    "Silao": {
+      "confirmados": 1,
+      "descartados": 0,
+      "investigacion": 5,
+      "id": 37
+    },
+    "Tarandacuao": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 1,
+      "id": 38
+    },
+    "Tarimoro": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 39
+    },
+    "Tierra Blanca": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 40
+    },
+    "Uriangato": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 4,
+      "id": 41
+    },
+    "Valle de Santiago": {
+      "confirmados": 1,
+      "descartados": 0,
+      "investigacion": 3,
+      "id": 42
+    },
+    "Victoria": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 43
+    },
+    "Villagrán": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 2,
+      "id": 44
+    },
+    "Xichú": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 45
+    },
+    "Yuriria": {
+      "confirmados": 1,
+      "descartados": 0,
+      "investigacion": 0,
+      "id": 46
+    },
+    "No residente": {
+      "confirmados": 0,
+      "descartados": 0,
+      "investigacion": 0
+    }
+  }
+}

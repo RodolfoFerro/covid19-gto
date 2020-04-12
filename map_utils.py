@@ -1,69 +1,49 @@
-from pprint import pprint
 import json
-import re
 
 
 class Guanajuato:
-	def __init__(self):
-		"""Loads data structure from JSON files."""
+    def __init__(self):
+        """Loads data structure from JSON files."""
 
-		with open('guanajuato.json') as json_file:
-			gto = json_file.read().encode('utf-8')
-		self.data = json.loads(gto)
+        with open('mapdata.json', encoding='utf-8') as json_file:
+            self.mapdata = json.load(json_file)
 
-		with open('numbers.json') as json_file:
-			totals = json_file.read().encode('utf-8')
-		self.totals = json.loads(totals)
-	
-	def generate_map(self):
-		"""Generates an SVG map from self data."""
+        with open('data.json', encoding='utf-8') as json_file:
+            self.data = json.load(json_file)
 
-		base_svg = """
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 534.91 453.27">
-				<defs>
-					<style>
-						path {
-							fill: #D4D4D4
-						}
-						path:hover {
-							opacity: 0.4;
-						}
-						.cls-1 {
-							fill:#18BC9C;
-						}
-						.cls-2 {
-							fill:#FCB748;
-						}
-						.cls-3 {
-							fill:#E74C3C;
-						}
-					</style>
-				</defs>
-				<g id="COVID-19" data-name="COVID-19">
-					{map_str}
-				</g>
-			</svg>
-		"""
+    def generate_map_data(self):
+        """Return map data to build in an SVG.
+        Map ref: https://seseaguanajuato.org/sistema_estatal_anticorrupcion/municipios
+        """
+        generated_mapdata = []
 
-		map_str = ""
-		for item in self.data:
-			if item['infectados']:
-				cls_col = 3
-			elif item['sospechosos']:
-				cls_col = 2
-			else:
-				cls_col = 1
-			map_str += f"""
-					<path class="cls-{cls_col}" d="{item['d']}" onmousemove="showTooltip(evt, '{item['municipio']}');" onmouseout="hideTooltip();" />
-			"""
+        for name, mapdata in self.mapdata.items():
+            try:
+                item_data = self.data['estados'][name]
 
-		map_svg = re.sub('{map_str}',  map_str,  base_svg)
-		
-		return map_svg
+                if item_data['confirmados']:
+                    cls_col = 3
+                elif item_data['investigacion']:
+                    cls_col = 2
+                else:
+                    cls_col = 1
+            except KeyError as e:
+                print(f'KeyError: {str(e)}')
+                cls_col = ''
+
+            generated_mapdata.append({
+                'name': name,
+                'data': mapdata,
+                'cls_col': cls_col
+            })
+
+        return generated_mapdata
 
 
 if __name__ == "__main__":
-	gto = Guanajuato()
-	print(gto.generate_map())
-	pprint(gto.totals, indent=4)
-	pprint(gto.data[11], indent=4)
+    from pprint import pprint
+
+    gto = Guanajuato()
+    print(gto.generate_map_data())
+    pprint(gto.data, indent=4)
+    pprint(gto.mapdata[11], indent=4)
