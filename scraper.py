@@ -2,9 +2,10 @@ import requests
 import json
 
 from time import time
+from hashlib import md5
 
 
-def scraper():
+def scraper(old_checksum=None):
     """Extract data from the official state site api."""
 
     endpoint_url = 'https://coronavirus.guanajuato.gob.mx/infectados.json'
@@ -13,7 +14,13 @@ def scraper():
     req.raise_for_status()
     data = req.json()
 
+    new_checksum = md5(req.content).hexdigest()
+
+    if new_checksum == old_checksum:
+        return {}
+
     parsed_data = {
+        'checksum': new_checksum,
         'timestamp': time(),
         'resumen': data['casos'],
         'estados': {}
@@ -27,7 +34,19 @@ def scraper():
     return parsed_data
 
 
-if __name__ == "__main__":
-    data = scraper()
-    with open('data.json', 'w', encoding='utf-8') as f:
+def run_and_save(filename='data.json'):
+    with open(filename, 'r', encoding='utf-8') as f:
+        old_data = json.load(f)
+        old_checksum = old_data.get('checksum', None)
+
+    data = scraper(old_checksum=old_checksum)
+
+    if not data:
+        return
+
+    with open(filename, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+if __name__ == "__main__":
+    run_and_save()
