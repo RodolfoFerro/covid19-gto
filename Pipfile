@@ -7,9 +7,9 @@ verify_ssl = true
 
 [packages]
 requests = "*"
-python-crontab = "*"
 Flask = "*"
 gunicorn = "*"
+apscheduler = "*"
 
 [requires]
 python_version = "3.8"

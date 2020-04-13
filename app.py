@@ -1,10 +1,12 @@
-from flask import Flask
-from flask import render_template
+from apscheduler.schedulers.background import BackgroundScheduler
+from flask import Flask, render_template
 
 from map_utils import Guanajuato
+from scraper import run_and_save
 
 
 app = Flask(__name__)
+
 app.config['JSON_SORT_KEYS'] = False
 
 
@@ -27,6 +29,11 @@ def index():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+
+sched = BackgroundScheduler(daemon=False)
+sched.add_job(run_and_save, 'interval', minutes=20)
+sched.start()
 
 
 if __name__ == "__main__":
