@@ -13,7 +13,8 @@ class Guanajuato:
 
     def generate_map_data(self):
         """Return map data to build in an SVG.
-        Map ref: https://seseaguanajuato.org/sistema_estatal_anticorrupcion/municipios
+        Map ref:
+            https://seseaguanajuato.org/sistema_estatal_anticorrupcion/municipios
         """
         generated_mapdata = []
 
