@@ -6,6 +6,7 @@ from time import time
 
 def scraper():
     """Extract data from the official state site api."""
+
     endpoint_url = 'https://coronavirus.guanajuato.gob.mx/infectados.json'
 
     req = requests.get(endpoint_url)
@@ -19,7 +20,9 @@ def scraper():
     }
 
     for name, values in data['listado'].items():
-        parsed_data['estados'][name] = {k: v for i in values for k, v in i.items()}  # noqa
+        parsed_data['estados'][name] = {
+            k: v for i in values for k, v in i.items()
+        }
 
     return parsed_data
 

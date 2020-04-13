@@ -87,7 +87,7 @@
 				<label>Toca un municipio para conocer detalles.</label>
 			</div>
 			<div class="col table-cases">
-				<table class="table table-hover text-center">
+				<table class="table table-hover text-center table-wrapper-scroll-y table-scrollbar">
 					<thead>
 						<tr class="table-primary">
 							<th scope="col">Municipio</th>
@@ -99,10 +99,12 @@
 					<tbody>
 						{% for name, value in estados.items() %}
 						<tr class="table-light">
+							{% if value.investigacion != 0 or value.confirmados !=0 or value.descartados != 0 %}
 							<th scope="row">{{ name }}</th>
 							<td>{{ value['investigacion'] }}</td>
 							<td>{{ value['confirmados'] }}</td>
 							<td>{{ value['descartados'] }}</td>
+							{% endif %}
 						</tr>
 						{% endfor %}
 					</tbody>

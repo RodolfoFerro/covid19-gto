@@ -42,3 +42,20 @@
 	color: #FFF;
 	font-size: 1.2em;
 }
+
+.table-scrollbar {
+	position: relative;
+	height: 500px;
+	overflow: auto;
+}
+
+.table-scrollbar thead th {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	z-index: 999;
+}
+
+.table-wrapper-scroll-y {
+	display: block;
+}
