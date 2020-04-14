@@ -34,10 +34,10 @@ def scraper(old_checksum=None):
     return parsed_data
 
 
-def run_and_save(filename='data.json'):
-    with open(filename, 'r', encoding='utf-8') as f:
-        old_data = json.load(f)
-        old_checksum = old_data.get('checksum', None)
+def run_and_save(filename='data/data.json',
+                 checksum_filename='data/data_checksum.txt'):
+    with open(checksum_filename, 'r') as f:
+        old_checksum = f.read()
 
     data = scraper(old_checksum=old_checksum)
 
@@ -46,6 +46,9 @@ def run_and_save(filename='data.json'):
 
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+
+    with open(checksum_filename, 'w') as f:
+        f.write(data['checksum'])
 
 
 if __name__ == "__main__":

@@ -5,10 +5,10 @@ class Guanajuato:
     def __init__(self):
         """Loads data structure from JSON files."""
 
-        with open('mapdata.json', encoding='utf-8') as json_file:
+        with open('data/mapdata.json', encoding='utf-8') as json_file:
             self.mapdata = json.load(json_file)
 
-        with open('data.json', encoding='utf-8') as json_file:
+        with open('data/data.json', encoding='utf-8') as json_file:
             self.data = json.load(json_file)
 
     def generate_map_data(self):
