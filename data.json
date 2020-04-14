@@ -1,11 +1,12 @@
 {
-  "timestamp": 1586724116.7780492,
+  "checksum": "192383c99964eb84c16d1eb0853d043a",
+  "timestamp": 1586837723.2383282,
   "resumen": {
-    "descartados": "1408",
-    "investigacion": "173",
-    "confirmados": "93",
-    "comunitaria": "9",
-    "recuperados": "29",
+    "descartados": "1455",
+    "investigacion": "135",
+    "confirmados": "102",
+    "comunitaria": "10",
+    "recuperados": "33",
     "fallecidos": "5",
     "fase": "FASE DOS"
   },
@@ -19,7 +20,7 @@
     "Acámbaro": {
       "confirmados": 0,
       "descartados": 0,
-      "investigacion": 5,
+      "investigacion": 1,
       "id": 2
     },
     "Apaseo el Alto": {
@@ -31,7 +32,7 @@
     "Apaseo el Grande": {
       "confirmados": 0,
       "descartados": 0,
-      "investigacion": 5,
+      "investigacion": 4,
       "id": 5
     },
     "Atarjea": {
@@ -43,7 +44,7 @@
     "Celaya": {
       "confirmados": 6,
       "descartados": 0,
-      "investigacion": 30,
+      "investigacion": 29,
       "id": 7
     },
     "Comonfort": {
@@ -85,7 +86,7 @@
     "Guanajuato": {
       "confirmados": 7,
       "descartados": 0,
-      "investigacion": 3,
+      "investigacion": 2,
       "id": 15
     },
     "Huanímaro": {
@@ -97,13 +98,13 @@
     "Irapuato": {
       "confirmados": 9,
       "descartados": 0,
-      "investigacion": 6,
+      "investigacion": 10,
       "id": 17
     },
     "Jaral del Progreso": {
       "confirmados": 0,
       "descartados": 0,
-      "investigacion": 0,
+      "investigacion": 1,
       "id": 18
     },
     "Jerécuaro": {
@@ -113,9 +114,9 @@
       "id": 19
     },
     "León": {
-      "confirmados": 34,
+      "confirmados": 36,
       "descartados": 0,
-      "investigacion": 75,
+      "investigacion": 55,
       "id": 20
     },
     "Manuel Doblado": {
@@ -125,7 +126,7 @@
       "id": 8
     },
     "Moroleón": {
-      "confirmados": 1,
+      "confirmados": 3,
       "descartados": 0,
       "investigacion": 2,
       "id": 21
@@ -157,13 +158,13 @@
     "Romita": {
       "confirmados": 0,
       "descartados": 0,
-      "investigacion": 1,
+      "investigacion": 0,
       "id": 26
     },
     "Salamanca": {
-      "confirmados": 26,
+      "confirmados": 29,
       "descartados": 0,
-      "investigacion": 9,
+      "investigacion": 4,
       "id": 27
     },
     "Salvatierra": {
@@ -199,7 +200,7 @@
     "San Luis de la Paz": {
       "confirmados": 1,
       "descartados": 0,
-      "investigacion": 0,
+      "investigacion": 1,
       "id": 33
     },
     "San Miguel de Allende": {
@@ -229,13 +230,13 @@
     "Silao": {
       "confirmados": 1,
       "descartados": 0,
-      "investigacion": 5,
+      "investigacion": 1,
       "id": 37
     },
     "Tarandacuao": {
       "confirmados": 0,
       "descartados": 0,
-      "investigacion": 1,
+      "investigacion": 0,
       "id": 38
     },
     "Tarimoro": {
@@ -251,9 +252,9 @@
       "id": 40
     },
     "Uriangato": {
-      "confirmados": 0,
+      "confirmados": 2,
       "descartados": 0,
-      "investigacion": 4,
+      "investigacion": 0,
       "id": 41
     },
     "Valle de Santiago": {
@@ -271,7 +272,7 @@
     "Villagrán": {
       "confirmados": 0,
       "descartados": 0,
-      "investigacion": 2,
+      "investigacion": 1,
       "id": 44
     },
     "Xichú": {
@@ -283,7 +284,7 @@
     "Yuriria": {
       "confirmados": 1,
       "descartados": 0,
-      "investigacion": 0,
+      "investigacion": 1,
       "id": 46
     },
     "No residente": {
