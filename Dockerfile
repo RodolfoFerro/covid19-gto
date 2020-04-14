@@ -1,12 +1,15 @@
 FROM python:3-alpine
 
+
+ENV PIP_NO_CACHE_DIR=false
+
+RUN pip install pipenv
+
 WORKDIR /app
 
-COPY requirements.txt .
+COPY Pipfile* ./
 
-RUN pip install --no-cache-dir -r requirements.txt
-
-RUN pip install gunicorn
+RUN pipenv install --system --deploy
 
 COPY . .
 
