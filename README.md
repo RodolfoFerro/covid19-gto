@@ -57,7 +57,7 @@ docker run -d -p 5000:5000 -v $(pwd):/app gto_covid19:latest
 ## Roadmap
 
 - [ ] Update about section
-- [ ] Add a cron job to scrape data
+- [X] Add a cron job to scrape data
 - [ ] Create a webhook for auto-deployment in server
 - [ ] Propose a way to extend scraped info (in order to create a more complete dashboard)
 
