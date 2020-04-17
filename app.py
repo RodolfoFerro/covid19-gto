@@ -1,5 +1,6 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 from flask import Flask, render_template
+from datetime import datetime
 
 from map_utils import Guanajuato
 from scraper import run_and_save
@@ -32,7 +33,8 @@ def about():
 
 
 sched = BackgroundScheduler(daemon=False)
-sched.add_job(run_and_save, 'interval', minutes=20)
+sched.add_job(run_and_save, 'interval',
+              minutes=20, next_run_time=datetime.now())
 sched.start()
 
 
