@@ -87,25 +87,29 @@
 				<label>Toca un municipio para conocer detalles.</label>
 			</div>
 			<div class="col table-cases">
-				<table class="table table-hover text-center table-wrapper-scroll-y table-scrollbar">
+				<table class="table table-sm table-striped table-wrapper-scroll-y table-scrollbar">
 					<thead>
-						<tr class="table-primary">
+						<tr class="table-primary small">
 							<th scope="col">Municipio</th>
 							<th scope="col">Casos en investigación</th>
 							<th scope="col">Casos confirmados</th>
-							<th scope="col">Casos descartados</th>
+							<th scope="col">Casos de transmisión comunitaria</th>
+							<th scope="col">Casos recuperados</th>
+							<th scope="col">Defunciones</th>
 						</tr>
 					</thead>
 					<tbody>
 						{% for name, value in estados.items() %}
-						<tr class="table-light">
-							{% if value.investigacion != 0 or value.confirmados !=0 or value.descartados != 0 %}
+						{% if value.investigacion or value.confirmados %}
+						<tr>
 							<th scope="row">{{ name }}</th>
 							<td>{{ value['investigacion'] }}</td>
 							<td>{{ value['confirmados'] }}</td>
-							<td>{{ value['descartados'] }}</td>
-							{% endif %}
+							<td>{{ value['comunitaria'] }}</td>
+							<td>{{ value['recuperados'] }}</td>
+							<td>{{ value['defunciones'] }}</td>
 						</tr>
+						{% endif %}
 						{% endfor %}
 					</tbody>
 				</table> 
